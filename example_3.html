@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title>Raphael example page</title>
+	<style>
+		body {
+			background-color:black;
+			padding:2em;
+		}
+		a {
+			color:yellow;
+			text-decoration:none;
+		}
+		a:hover {
+			text-decoration:underline;	
+		}
+		ul {
+			margin:0px;
+			padding:0px;
+		}
+		li {
+			list-style:none;
+		}
+		ul.pagination {
+			clear:both;	
+		}
+		ul.pagination li {
+			float:left;
+			padding-right:4em;
+		}
+		ul.pagination li.next {
+			float:right;
+			padding:0px;
+		}
+		pre { color:white; }
+		ul.pagination .index {
+			clear:both;
+			padding-top:2em;
+		}
+	</style>
+</head>
+<body>
+    <pre>
+Raphael.fn.arrow = function(x, y) {
+	return this.path(["M", x, y] + "m-10 -10l20, 0, 0-6, 10, 16-10, 16, 0-6 -20, 0 0, 6 -10-16 10-16z").attr({ // concatenating the Array & String produces a string
+		fill: "#fff",
+		stroke: "none",
+		opacity: 0.2
+	});;	
+};
+
+Raphael.fin.fill = function(fill) {
+	this.attr({ fill: fill });
+};
+
+Raphael.el.stroke = function(stroke) {
+	this.attr({ stroke: stroke });	
+};
+	</pre>
+	<ul class="pagination">		
+		<li><a href="example_2.html">Last example</a></li>
+		<li class="index"><a href="index.html">Back to index</a></li>
+	</ul>	
+</body>
+</html>
